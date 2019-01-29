@@ -1,0 +1,31 @@
+{
+  "name": "qoa",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "klaussinani/qoa",
+  "author": {
+    "name": "Klaus Sinani",
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+  ],
+  "keywords": [
+  ],
+  "scripts": {
+    "test": "xo"
+  },
+  "devDependencies": {
+    "xo": "*"
+  },
+  "xo": {
+    "space": 2,
+    "rules": {
+      "no-await-in-loop": 0
+    }
+  }
+}
