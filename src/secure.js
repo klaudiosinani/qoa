@@ -5,7 +5,7 @@ const Text = require('./text');
 class Secure extends Text {
   constructor(opts = {}) {
     super(opts);
-    this._symbol = opts.symbol || '◼';
+    this._symbol = opts.symbol || '*';
   }
 
   _secureStr(n) {
