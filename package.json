@@ -17,6 +17,11 @@
     "index.js"
   ],
   "keywords": [
+    "cli",
+    "command-line",
+    "interactive",
+    "interfaces",
+    "prompts"
   ],
   "scripts": {
     "test": "xo"
