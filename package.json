@@ -13,6 +13,8 @@
     "node": ">=6"
   },
   "files": [
+    "src",
+    "index.js"
   ],
   "keywords": [
   ],
