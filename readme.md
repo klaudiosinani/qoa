@@ -20,6 +20,16 @@ Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://tw
 
 ## Highlights
 
+- 7 out-of-the-box interactive prompts
+- Zero dependencies
+- Lightweight & fast
+- Clean & concise output
+- Simple & minimal usage syntax
+- Navigation, quiz & keypress menus
+- Secure & hidden input interfaces
+- Utilizes async/await expressions
+- Configurable & customizable
+
 ## Contents
 
 - [Description](#description)
