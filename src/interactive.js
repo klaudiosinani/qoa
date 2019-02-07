@@ -14,6 +14,7 @@ class Interactive extends Nav {
       const {name, ctrl} = key;
 
       if (key && ctrl && name === 'c') {
+        this._cursor.show();
         this._input.pause();
       }
 
@@ -38,6 +39,7 @@ class Interactive extends Nav {
     };
 
     return new Promise(resolve => {
+      this._cursor.hide();
       this._displayQuestion();
 
       this._input.resume();
@@ -47,6 +49,7 @@ class Interactive extends Nav {
       this._input.on('keypress', onkeypress);
 
       this._emitter.on('selection', () => {
+        this._cursor.show();
         this._input.pause();
         this._input.setRawMode(false);
         this._input.removeListener('keypress', onkeypress);
