@@ -7,7 +7,7 @@
 </h4>
 
 <div align="center">
-  <img alt="Header" src="media/header.gif" width="88%">
+  <img alt="Header" src="media/header.gif" width="80%">
 </div>
 
 <p align="center">
