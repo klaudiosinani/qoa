@@ -7,7 +7,7 @@
 </h4>
 
 <div align="center">
-  <img alt="Header" src="media/header.gif" width="80%">
+  <img alt="Header" src="media/header.gif" width="75%">
 </div>
 
 <p align="center">
@@ -62,17 +62,137 @@ npm install qoa
 
 ### Confirm Prompt
 
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'confirm',
+    query: 'Update Qoa to latest version?',
+    handle: 'update',
+    accept: 'Y',
+    deny: 'n'
+  }
+]);
+
+//=> { update: true }
+```
+
 ### Hidden Prompt
+
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'hidden',
+    query: '[sudo] password for admin:',
+    handle: 'sudo'
+  }
+]);
+
+//=> { sudo: 'admin' }
+```
 
 ### Input Prompt
 
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'input',
+    query: 'Select your username:',
+    handle: 'username'
+  }
+]);
+
+//=> { username: 'klaussinani' }
+```
+
 ### Interactive Prompt
+
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'interactive',
+    query: 'What is your favorite treat?',
+    handle: 'treat',
+    menu: [
+      'Chocolate',
+      'Cupcakes',
+      'Ice-Cream'
+    ]
+  }
+]);
+
+//=> { treat: 'Cupcakes' }
+```
 
 ### Keypress Prompt
 
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'keypress',
+    query: 'How useful are the new features?',
+    handle: 'features',
+    menu: [
+      'Meh',
+      'Averagely',
+      'Very',
+      'Super'
+    ]
+  }
+]);
+
+//=> { features: 'Very' }
+```
+
 ### Quiz Prompt
 
+```js
+const qoa = require('qoa');
+
+qoa.request([
+    {
+    type: 'quiz',
+    query: 'How far is the moon from Earth?',
+    handle: 'distance',
+    answer: '333400 km',
+    amount: 4,
+    choices: [
+      '190000 km',
+      '280500 km',
+      '333400 km',
+      '560000 km',
+      '890500 km'
+    ]
+  }
+]);
+
+//=> { distance: { answer: '333400 km', isCorrect: true } }
+```
+
 ### Secure Prompt
+
+```js
+const qoa = require('qoa');
+
+qoa.request([
+  {
+    type: 'secure',
+    query: 'Confirm your password:',
+    handle: 'password'
+  }
+]);
+
+//=> { password: 'password' }
+```
 
 ## Configuration
 
