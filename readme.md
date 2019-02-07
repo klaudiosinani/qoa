@@ -6,6 +6,10 @@
   💬 Minimal interactive command-line prompts
 </h4>
 
+<div align="center">
+  <img alt="Header" src="media/header.gif" width="88%">
+</div>
+
 <p align="center">
   <a href="https://travis-ci.org/klaussinani/qoa">
     <img alt="Build Status" src="https://travis-ci.com/klaussinani/qoa.svg?branch=master">
