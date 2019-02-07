@@ -9,6 +9,25 @@ class Menu extends Prompt {
     this._emitter = new events.EventEmitter();
   }
 
+  get _cursor() {
+    return {
+      hide: () => {
+        if (!this._output.isTTY) {
+          return;
+        }
+
+        this._output.write('\u001B[?25l');
+      },
+      show: () => {
+        if (!this._output.isTTY) {
+          return;
+        }
+
+        this._output.write('\u001B[?25h');
+      }
+    };
+  }
+
   _clearLines(n) {
     for (let i = 0; i < n; i++) {
       this._output.moveCursor(0, -1);
