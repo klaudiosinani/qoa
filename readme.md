@@ -119,7 +119,7 @@ const input = {
   handle: 'username'
 };
 
-// using general `prompt` async method
+// using the `prompt` async method
 qoa.prompt([input]).then(log);
 //=> { username: 'klaussinani' }
   
