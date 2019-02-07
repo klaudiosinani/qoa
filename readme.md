@@ -65,16 +65,22 @@ npm install qoa
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'confirm',
-    query: 'Update Qoa to latest version?',
-    handle: 'update',
-    accept: 'Y',
-    deny: 'n'
-  }
-]);
+const {log} = console;
 
+const confirm = {
+  type: 'confirm',
+  query: 'Update Qoa to latest version?',
+  handle: 'update',
+  accept: 'Y',
+  deny: 'n'
+};
+
+// using the `prompt` async method
+qoa.prompt([confirm]).then(log);
+//=> { update: true }
+
+// using the `confirm` async method
+qoa.confirm(confirm).then(log);
 //=> { update: true }
 ```
 
@@ -83,14 +89,20 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'hidden',
-    query: '[sudo] password for admin:',
-    handle: 'sudo'
-  }
-]);
+const {log} = console;
 
+const hidden = {
+  type: 'hidden',
+  query: '[sudo] password for admin:',
+  handle: 'sudo'
+};
+
+// using the `prompt` async method
+qoa.prompt([hidden]).then(log);
+//=> { sudo: 'admin' }
+
+// using the `hidden` async method
+qoa.hidden(hidden).then(log);
 //=> { sudo: 'admin' }
 ```
 
@@ -99,14 +111,20 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'input',
-    query: 'Select your username:',
-    handle: 'username'
-  }
-]);
+const {log} = console;
 
+const input = {
+  type: 'input',
+  query: 'Select your username:',
+  handle: 'username'
+};
+
+// using general `prompt` async method
+qoa.prompt([input]).then(log);
+//=> { username: 'klaussinani' }
+  
+// using the `input` async method
+qoa.input(input).then(log);
 //=> { username: 'klaussinani' }
 ```
 
@@ -115,19 +133,25 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'interactive',
-    query: 'What is your favorite treat?',
-    handle: 'treat',
-    menu: [
-      'Chocolate',
-      'Cupcakes',
-      'Ice-Cream'
-    ]
-  }
-]);
+const {log} = console;
 
+const interactive = {
+  type: 'interactive',
+  query: 'What is your favorite treat?',
+  handle: 'treat',
+  menu: [
+    'Chocolate',
+    'Cupcakes',
+    'Ice-Cream'
+  ]
+};
+
+// using the `prompt` async method
+qoa.prompt([interactive]).then(log);
+//=> { treat: 'Cupcakes' }
+
+// using the `interactive` async method
+qoa.interactive(interactive).then(log);
 //=> { treat: 'Cupcakes' }
 ```
 
@@ -136,20 +160,26 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'keypress',
-    query: 'How useful are the new features?',
-    handle: 'features',
-    menu: [
-      'Meh',
-      'Averagely',
-      'Very',
-      'Super'
-    ]
-  }
-]);
+const {log} = console;
 
+const keypress = {
+  type: 'keypress',
+  query: 'How useful are the new features?',
+  handle: 'features',
+  menu: [
+    'Meh',
+    'Averagely',
+    'Very',
+    'Super'
+  ]
+};
+
+// using the `prompt` async method
+qoa.prompt([keypress]).then(log);
+//=> { features: 'Very' }
+
+// using the `keypress` async method
+qoa.keypress(keypress).then(log);
 //=> { features: 'Very' }
 ```
 
@@ -158,23 +188,29 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-    {
-    type: 'quiz',
-    query: 'How far is the moon from Earth?',
-    handle: 'distance',
-    answer: '333400 km',
-    amount: 4,
-    choices: [
-      '190000 km',
-      '280500 km',
-      '333400 km',
-      '560000 km',
-      '890500 km'
-    ]
-  }
-]);
+const {log} = console;
 
+const quiz = {
+  type: 'quiz',
+  query: 'How far is the moon from Earth?',
+  handle: 'distance',
+  answer: '333400 km',
+  amount: 4,
+  choices: [
+    '190000 km',
+    '280500 km',
+    '333400 km',
+    '560000 km',
+    '890500 km'
+  ]
+};
+
+// using the `prompt` async method
+qoa.prompt([quiz]).then(log);
+//=> { distance: { answer: '333400 km', isCorrect: true } }
+
+// using the `quiz` async method
+qoa.quiz(quiz).then(log);
 //=> { distance: { answer: '333400 km', isCorrect: true } }
 ```
 
@@ -183,14 +219,20 @@ qoa.request([
 ```js
 const qoa = require('qoa');
 
-qoa.request([
-  {
-    type: 'secure',
-    query: 'Confirm your password:',
-    handle: 'password'
-  }
-]);
+const {log} = console;
 
+const secure = {
+  type: 'secure',
+  query: 'Confirm your password:',
+  handle: 'password'
+};
+
+// using the `prompt` async method
+qoa.prompt([secure]).then(log);
+//=> { password: 'password' }
+
+// using the `secure` async method
+qoa.secure(secure).then(log);
 //=> { password: 'password' }
 ```
 
