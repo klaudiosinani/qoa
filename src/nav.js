@@ -7,7 +7,7 @@ class Nav extends Menu {
   constructor(opts = {}) {
     super(opts);
     this._idx = 0;
-    this._symbol = opts.symbol || '▲';
+    this._symbol = opts.symbol || '>';
   }
 
   get _formatItem() {
