@@ -388,6 +388,318 @@ qoa.secure('Type your password:');
 //=> > Type your password: ******
 ```
 
+## API
+
+#### qoa.`prompt([, configObj])`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Sequentially create & display a series of prompts.
+
+##### `configObj`
+
+- Type: `Object`
+
+Object containing the configuration of a prompt. Can hold any of the documented [options](#Usage).
+
+#### qoa.`confirm({ type, query, handle, accept, deny })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display a `confirm` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'confirm'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.confirm()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+##### `accept`
+
+- Type: `String`
+- Default: `'Y'`
+
+The string to be typed in order for the prompt to be confirmed.
+
+##### `deny`
+
+- Type: `String`
+- Default: `'n'`
+
+The string to be typed in order for the prompt to be rejected.
+
+#### qoa.`hidden({ type, query, handle })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display a `hidden` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'hidden'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.hidden()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+#### qoa.`input({ type, query, handle })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display an `input` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'input'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.input()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+#### qoa.`interactive({ type, query, handle, symbol, menu })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display an `interactive` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'interactive'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.interactive()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+##### `symbol`
+
+- Type: `String`
+- Default: `'>'`
+
+The string to be used as the navigation indicator for the menu.
+can be customized through the symbol option and if omitted the default string '>' will be used.
+
+##### `menu`
+
+- Type: `String[]`
+
+The array containing the menu options.
+
+#### qoa.`keypress({ type, query, handle, menu })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display a `keypress` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'keypress'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.keypress()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+##### `menu`
+
+- Type: `String[]`
+
+The array containing the menu options.
+
+#### qoa.`quiz({ type, query, handle, answer, symbol, amount, choices })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display a `quiz` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'quiz'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.quiz()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+##### `answer`
+
+- Type: `String`
+
+The correct answer to the quiz.
+
+##### `symbol`
+
+- Type: `String`
+- Default: `'>'`
+
+The string to be used as the navigation indicator for the menu.
+
+##### `amount`
+
+- Type: `Number`
+- Default: `3`
+
+The number of options to be included to the menu.
+
+##### `choices`
+
+- Type: `String[]`
+
+The array containing the candidate menu options.
+
+#### qoa.`secure({ type, query, handle })`
+
+- Type: `Function`
+- Async: `True`
+- Returns: `Object`
+
+Create and display a `secure` prompt.
+
+##### `type`
+
+- Type: `String`
+- Default: `'secure'`
+
+Indicates the type of the prompt. The option is **mandatory** when it is part of the configuration object inside the array passed to `qoa.prompt()` function. Can be considered **optional** when it is part of the object passed to the `qoa.secure()` function.
+
+##### `query`
+
+- Type: `String`
+
+The query to be displayed by the prompt.
+
+##### `handle`
+
+- Type: `String`
+
+The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+#### qoa.`config({ prefix, underlineQuery })`
+
+- Type: `Function`
+- Async: `False`
+
+Collectively configure a qoa instance.
+
+##### `prefix`
+
+- Type: `String`
+- Default: `''`
+
+A string to be included as prefix to the query of each prompt.
+
+##### `underlineQuery`
+
+- Type: `Boolean`
+- Default: `false`
+
+Underline the query of each prompt.
+
+#### qoa.`prefix(str)`
+
+- Type: `Function`
+- Async: `False`
+
+Add a string as prefix to the query of each prompt belonging to the targeted qoa instance.
+
+##### `str`
+
+- Type: `String`
+
+A string to be included as prefix to the query of each prompt.
+
+#### qoa.`underlineQuery(status)`
+
+- Type: `Function`
+- Async: `False`
+
+Underline the query of each prompt belonging to the targeted qoa instance.
+
+##### `status`
+
+- Type: `Boolean`
+
+Underline the query of each prompt.
+
 ## Development
 
 For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/qoa/blob/master/contributing.md).
