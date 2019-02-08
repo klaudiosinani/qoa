@@ -155,6 +155,8 @@ qoa.confirm(confirm).then(log);
 
 ### Hidden Prompt
 
+Initializes a text based prompt, where the input provided by the user is automatically hidden while typed. The return value is a new object with the prompt result stored under the specified `handle` property.
+
 ```js
 const qoa = require('qoa');
 
@@ -174,6 +176,10 @@ qoa.prompt([hidden]).then(log);
 qoa.hidden(hidden).then(log);
 //=> { sudo: 'admin' }
 ```
+
+<div align="center">
+  <img alt="Hidden Prompt" src="media/hidden.gif" width="68%">
+</div>
 
 ### Input Prompt
 
