@@ -275,6 +275,8 @@ qoa.keypress(keypress).then(log);
 
 ### Quiz Prompt
 
+Initializes an interactive navigable menu based prompt, where the user can navigate within a set options and select only one of them. The displayed menu is consisted of a number `amount` of options, of which the value of `answer` is by default one of them, corresponding to the correct answer to the query, and the rest `amount - 1` are randomly selected from the `choices` array. The navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` is used. The return value is new object containing the selected option, stored under the specified `handle` property, and a boolean `isCorrect` attribute, indicating whether the choice made by the user was the `answer` one.
+
 ```js
 const qoa = require('qoa');
 
@@ -285,6 +287,7 @@ const quiz = {
   query: 'How far is the moon from Earth?',
   handle: 'distance',
   answer: '333400 km',
+  symbol: '>',
   amount: 4,
   choices: [
     '190000 km',
@@ -303,6 +306,10 @@ qoa.prompt([quiz]).then(log);
 qoa.quiz(quiz).then(log);
 //=> { distance: { answer: '333400 km', isCorrect: true } }
 ```
+
+<div align="center">
+  <img alt="Quiz Prompt" src="media/quiz.gif" width="68%">
+</div>
 
 ### Secure Prompt
 
