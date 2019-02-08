@@ -58,6 +58,69 @@ npm install qoa
 
 ## Usage
 
+Import qoa and start using any of the available prompts:
+
+- `confirm`
+- `hidden`
+- `input`
+- `interactive`
+- `keypress`
+- `quiz`
+- `secure`
+
+In order to sequentially create & display a series of prompts, the asynchronous unary `qoa.prompt` function can be used. The function accepts as input an array of objects, where each object contains the configuration of its corresponding prompt. The display order of the prompts is based on the order in which the configuration objects are defined inside the array. A new object containing the user's response to each prompt is finally returned by the function.
+
+```js
+const qoa = require('qoa');
+
+const {log} = console;
+
+const ps = [
+  {
+    type: 'input',
+    query: 'Type your username:',
+    handle: 'username'
+  },
+  {
+    type: 'secure',
+    query: 'Type your password:',
+    handle: 'password'
+  }
+];
+
+qoa.prompt(ps).then(log);
+//=> { username: 'klaussinani', password: 'token' }
+```
+
+<div align="center">
+  <img alt="Usage" src="media/usage.gif" width="75%">
+</div>
+
+Alternatively, for non sequential use-cases, each prompt can be individually initialized through its respective asynchronous unary function, where each function accepts as input an object containing the prompt's properties/configuration.
+
+```js
+const qoa = require('qoa');
+
+const {log} = console;
+
+const login = async () => {
+  const username = await qoa.input({
+    query: 'Type your username:',
+    handle: 'username'
+  });
+
+  const password = await qoa.secure({
+    query: 'Type your password:',
+    handle: 'password'
+  });
+
+  return Object.assign({}, username, password);
+}
+
+login().then(log);
+//=> { username: 'klaussinani', password: 'token' }
+```
+
 ## Prompts
 
 ### Confirm Prompt
