@@ -345,7 +345,48 @@ qoa.secure(secure).then(log);
 
 ## Configuration
 
-## API
+Qoa can be collectively configured through the unary `config()` function, which accepts an object containing the following two attributes: `prefix` & `underlineQuery`. The configuration is applied to all prompts belonging to the targeted qoa instance.
+
+##### `prefix`
+
+- Type: `String`
+- Default: `''`
+
+A string to be included as prefix to the query of each prompt.
+
+##### `underlineQuery`
+
+- Type: `Boolean`
+- Default: `false`
+
+Underline the query of each prompt.
+
+```js
+const qoa = require('qoa');
+
+qoa.config({
+  prefix: '>', // Use the `>` string as prefix to all queries
+  underlineQuery: false // Do not underline queries
+})
+
+qoa.secure('Type your password:');
+//=> > Type your password: ******
+```
+
+Additionally, for individual customization the unary `prefix` & `underlineQuery` functions are available.
+
+```js
+const qoa = require('qoa');
+
+// Use the `>` string as prefix to all queries
+qoa.prefix('>');
+
+// Do not underline queries
+qoa.underlineQuery(false);
+
+qoa.secure('Type your password:');
+//=> > Type your password: ******
+```
 
 ## Development
 
