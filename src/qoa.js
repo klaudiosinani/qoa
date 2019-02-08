@@ -30,7 +30,7 @@ class Qoa {
     this._prefix = str;
   }
 
-  underline(status) {
+  underlineQuery(status) {
     this._underline = status;
   }
 
