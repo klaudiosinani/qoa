@@ -239,6 +239,10 @@ qoa.interactive(interactive).then(log);
 //=> { treat: 'Cupcakes' }
 ```
 
+<div align="center">
+  <img alt="Interactive Prompt" src="media/interactive.gif" width="68%">
+</div>
+
 ### Keypress Prompt
 
 Initializes an non-navigable menu based prompt, where the user can select one of the options defined in the `menu` array, by pressing the unique key corresponding to it. The options can be up to `9` at maximum, and then keys are integers `x` where `1 <= x <= 9`. The return value is new object with the selected option stored under the specified `handle` property.
