@@ -313,6 +313,8 @@ qoa.quiz(quiz).then(log);
 
 ### Secure Prompt
 
+Initializes a text based prompt, where each character typed by the user is automatically replaced with the `*` symbol. The return value is an object with the prompt result stored under the specified `handle` property.
+
 ```js
 const qoa = require('qoa');
 
@@ -320,7 +322,7 @@ const {log} = console;
 
 const secure = {
   type: 'secure',
-  query: 'Confirm your password:',
+  query: 'What\'s your password:',
   handle: 'password'
 };
 
@@ -332,6 +334,10 @@ qoa.prompt([secure]).then(log);
 qoa.secure(secure).then(log);
 //=> { password: 'password' }
 ```
+
+<div align="center">
+  <img alt="Secure Prompt" src="media/secure.gif" width="68%">
+</div>
 
 ## Configuration
 
