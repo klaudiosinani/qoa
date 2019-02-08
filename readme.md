@@ -155,7 +155,7 @@ qoa.confirm(confirm).then(log);
 
 ### Hidden Prompt
 
-Initializes a text based prompt, where the input provided by the user is automatically hidden while typed. The return value is a new object with the prompt result stored under the specified `handle` property.
+Initializes a text based prompt, where each character typed by the user is automatically hidden. The return value is a new object with the prompt result stored under the specified `handle` property.
 
 ```js
 const qoa = require('qoa');
@@ -245,7 +245,7 @@ qoa.interactive(interactive).then(log);
 
 ### Keypress Prompt
 
-Initializes an non-navigable menu based prompt, where the user can select one of the options defined in the `menu` array, by pressing the unique key corresponding to it. The options can be up to `9` at maximum, and then keys are integers `x` where `1 <= x <= 9`. The return value is new object with the selected option stored under the specified `handle` property.
+Initializes an non-navigable menu based prompt, where the user can select one of the options defined in the `menu` array, by pressing the unique key corresponding to it. The options can be up to `9`, and the keys are integers `x` where `1 <= x <= 9`. The return value is new object with the selected option stored under the specified `handle` property.
 
 ```js
 const qoa = require('qoa');
@@ -345,7 +345,7 @@ qoa.secure(secure).then(log);
 
 ## Configuration
 
-Qoa can be collectively configured through the unary `config()` function, which accepts an object containing the following two attributes: `prefix` & `underlineQuery`. The configuration is applied to all prompts belonging to the targeted qoa instance.
+Qoa can be collectively configured through the unary `qoa.config()` function, which accepts an object containing the following two attributes: `prefix` & `underlineQuery`. The configuration is applied to all prompts belonging to the targeted qoa instance.
 
 ##### `prefix`
 
