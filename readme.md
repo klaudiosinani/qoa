@@ -211,6 +211,8 @@ qoa.input(input).then(log);
 
 ### Interactive Prompt
 
+Initializes an interactive navigable menu based prompt, where the user can navigate within a set of options and select only one of them. The options can be defined in the `menu` array while the navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` will be used. The return value is new object with the selected option stored under the specified `handle` property.
+
 ```js
 const qoa = require('qoa');
 
@@ -220,6 +222,7 @@ const interactive = {
   type: 'interactive',
   query: 'What is your favorite treat?',
   handle: 'treat',
+  symbol: '>',
   menu: [
     'Chocolate',
     'Cupcakes',
