@@ -183,6 +183,8 @@ qoa.hidden(hidden).then(log);
 
 ### Input Prompt
 
+Initializes a text based prompt, where input can be freely provided by the user. The return value is a new object with the prompt result stored under the specified `handle` property.
+
 ```js
 const qoa = require('qoa');
 
@@ -202,6 +204,10 @@ qoa.prompt([input]).then(log);
 qoa.input(input).then(log);
 //=> { username: 'klaussinani' }
 ```
+
+<div align="center">
+  <img alt="Input Prompt" src="media/input.gif" width="68%">
+</div>
 
 ### Interactive Prompt
 
