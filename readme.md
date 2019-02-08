@@ -125,6 +125,8 @@ login().then(log);
 
 ### Confirm Prompt
 
+Initializes a text based input prompt with two `accept` & `deny` options. Based on the input provided by the user, the query displayed by the prompt is confirmed or rejected. In order for the query to be confirmed, thus return `true`, the user must provide exactly the indicated `accept` string (strict equality). On any other input the query is rejected & `false` is returned. The return value is a new object with the prompt result stored under the specified `handle` property.
+
 ```js
 const qoa = require('qoa');
 
@@ -146,6 +148,10 @@ qoa.prompt([confirm]).then(log);
 qoa.confirm(confirm).then(log);
 //=> { update: true }
 ```
+
+<div align="center">
+  <img alt="Confirm Prompt" src="media/confirm.gif" width="68%">
+</div>
 
 ### Hidden Prompt
 
