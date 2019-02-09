@@ -62,8 +62,8 @@ class Qoa {
     return new Secure(this._buildConfig(x)).request();
   }
 
-  clearScreen(){
-    return process.stdout.write('\x1Bc');
+  clearScreen() {
+    return process.stdout.write('\u001Bc');
   }
 
   async prompt(questions) {
