@@ -40,10 +40,12 @@ class Quiz extends Nav {
 
       switch (name) {
         case 'up':
+        case 'k':
           this._moveUpwards();
           break;
 
         case 'down':
+        case 'j':
           this._moveDownwards();
           break;
 
