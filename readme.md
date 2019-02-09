@@ -28,7 +28,7 @@ Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://tw
 
 - 7 out-of-the-box interactive prompts
 - Zero dependencies
-- Lightweight & fast [8.8kb / 71ms](https://bundlephobia.com/result?p=qoa)
+- Lightweight & fast 8.8kb / 71ms
 - Clean & concise output
 - Simple & minimal usage syntax
 - Navigation, quiz & keypress menus
