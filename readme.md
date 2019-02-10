@@ -28,7 +28,7 @@ Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://tw
 
 - 7 out-of-the-box interactive prompts
 - Zero dependencies
-- Lightweight & fast 8.8kb / 71ms
+- Lightweight & fast [8.8kB / 71ms](https://bundlephobia.com/result?p=qoa)
 - Clean & concise output
 - Simple & minimal usage syntax
 - Navigation, quiz & keypress menus
@@ -369,7 +369,11 @@ qoa.config({
   underlineQuery: false // Do not underline queries
 })
 
-qoa.secure('Type your password:');
+qoa.secure({
+  type: 'secure',
+  query: 'Type your password:',
+  handle: 'password'
+});
 //=> > Type your password: ******
 ```
 
@@ -384,7 +388,11 @@ qoa.prefix('>');
 // Do not underline queries
 qoa.underlineQuery(false);
 
-qoa.secure('Type your password:');
+qoa.secure({
+  type: 'secure',
+  query: 'Type your password:',
+  handle: 'password'
+});
 //=> > Type your password: ******
 ```
 
