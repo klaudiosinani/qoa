@@ -62,6 +62,11 @@ class Qoa {
     return new Secure(this._buildConfig(x)).request();
   }
 
+  clearScreen() {
+    process.stdout.cursorTo(0, 0);
+    process.stdout.clearScreenDown();
+  }
+
   async prompt(questions) {
     const answers = {};
 
