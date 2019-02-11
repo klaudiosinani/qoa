@@ -211,7 +211,7 @@ qoa.input(input).then(log);
 
 ### Interactive Prompt
 
-Initializes an interactive navigable menu based prompt, where the user can navigate within a set of options and select only one of them. The options can be defined in the `menu` array while the navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` will be used. The return value is new object with the selected option stored under the specified `handle` property.
+Initializes an interactive navigable menu based prompt, where the user can navigate within a set of options and select only one of them. The options can be defined in the `menu` array while the navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` will be used. The return value is new object with the selected option stored under the specified `handle` property. The interactive menu can be navigated through the `up arrow`/`k` & `down arrow`/`j` keys.
 
 ```js
 const qoa = require('qoa');
@@ -279,7 +279,7 @@ qoa.keypress(keypress).then(log);
 
 ### Quiz Prompt
 
-Initializes an interactive navigable menu based prompt, where the user can navigate within a set options and select only one of them. The displayed menu is consisted of a number `amount` of options, of which the value of `answer` is by default one of them, corresponding to the correct answer to the query, and the rest `amount - 1` are randomly selected from the `choices` array. The navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` is used. The return value is new object containing the selected option, stored under the specified `handle` property, and a boolean `isCorrect` attribute, indicating whether the choice made by the user was the `answer` one.
+Initializes an interactive navigable menu based prompt, where the user can navigate within a set options and select only one of them. The displayed menu is consisted of a number `amount` of options, of which the value of `answer` is by default one of them, corresponding to the correct answer to the query, and the rest `amount - 1` are randomly selected from the `choices` array. The navigation indicator can be customized through the `symbol` option and if omitted the default string `'>'` is used. The return value is new object containing the selected option, stored under the specified `handle` property, and a boolean `isCorrect` attribute, indicating whether the choice made by the user was the `answer` one. The quiz menu can be navigated through the `up arrow`/`k` & `down arrow`/`j` keys.
 
 ```js
 const qoa = require('qoa');
@@ -707,6 +707,13 @@ Underline the query of each prompt belonging to the targeted qoa instance.
 - Type: `Boolean`
 
 Underline the query of each prompt.
+
+#### qoa.`clearScreen()`
+
+- Type: `Function`
+- Async: `False`
+
+Move the cursor to the top-right corner of the console and clear everything below it.
 
 ## Development
 
