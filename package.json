@@ -1,6 +1,6 @@
 {
   "name": "qoa",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "💬 Minimal interactive command-line prompts",
   "license": "MIT",
   "repository": "klaussinani/qoa",
