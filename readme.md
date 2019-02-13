@@ -713,7 +713,7 @@ Underline the query of each prompt.
 - Type: `Function`
 - Async: `False`
 
-Move the cursor to the top-right corner of the console and clear everything below it.
+Move the cursor to the top-left corner of the console and clear everything below it.
 
 ## Development
 
