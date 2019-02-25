@@ -728,6 +728,7 @@ For more info on how to contribute to the project, please read the [contributing
 
 - [signale](https://github.com/klaussinani/signale) - Hackable console logger
 - [taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat
+- [hyperocean](https://github.com/klaussinani/hyperocean) - Deep oceanic blue Hyper terminal theme
 
 ## Team
 
