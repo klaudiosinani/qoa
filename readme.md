@@ -52,6 +52,14 @@ Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://tw
 
 ## Install
 
+### Yarn
+
+```bash
+yarn add qoa
+```
+
+### NPM
+
 ```bash
 npm install qoa
 ```
