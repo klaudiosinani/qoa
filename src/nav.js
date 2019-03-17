@@ -1,6 +1,6 @@
 'use strict';
 const Menu = require('./menu');
-const Seperator = require('./seperator');
+const Separator = require('./separator');
 
 const {log} = console;
 
@@ -20,8 +20,8 @@ class Nav extends Menu {
 
   get _menuItems() {
     return this._menu.map((x, i) => {
-      const _x =  x instanceof Seperator ? x._seperator : x;
-      if ((i === this._idx) && !(x instanceof Seperator)) {
+      const _x =  x instanceof Separator ? x._seperator : x;
+      if ((i === this._idx) && !(x instanceof Separator)) {
         return this._formatItem.selected(_x);
       }
 
