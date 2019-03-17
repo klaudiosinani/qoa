@@ -56,9 +56,9 @@ class Interactive extends Nav {
         this._input.pause();
         this._input.setRawMode(false);
         this._input.removeListener('keypress', onkeypress);
-        
+
         if (answer.action instanceof Separator) {
-          reject("Separator can't selected");
+          reject(new Error('Separator can\'t selected'));
         } else {
           resolve(answer);
         }
