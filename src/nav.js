@@ -20,7 +20,7 @@ class Nav extends Menu {
 
   get _menuItems() {
     return this._menu.map((x, i) => {
-      const _x =  x instanceof Separator ? x._seperator : x;
+      const _x = x instanceof Separator ? x._seperator : x;
       if ((i === this._idx) && !(x instanceof Separator)) {
         return this._formatItem.selected(_x);
       }
