@@ -11,7 +11,7 @@ class Interactive extends Nav {
     const answer = {};
 
     const onkeypress = (_, key) => {
-      const {name, ctrl} = key;
+      const { name, ctrl } = key;
 
       if (key && ctrl && name === 'c') {
         this._cursor.show();
