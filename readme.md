@@ -224,7 +224,7 @@ Initializes an interactive navigable menu based prompt, where the user can navig
 ```js
 const qoa = require('qoa');
 
-const {log} = console;
+const {log, error} = console;
 
 const interactive = {
   type: 'interactive',
@@ -239,11 +239,11 @@ const interactive = {
 };
 
 // using the `prompt` async method
-qoa.prompt([interactive]).then(log);
+qoa.prompt([interactive]).then(log).catch(error);
 //=> { treat: 'Cupcakes' }
 
 // using the `interactive` async method
-qoa.interactive(interactive).then(log);
+qoa.interactive(interactive).then(log).catch(error);
 //=> { treat: 'Cupcakes' }
 ```
 
