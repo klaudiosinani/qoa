@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  💬 Minimal interactive command-line prompts
+  Minimal interactive command-line prompts
 </h4>
 
 <div align="center">
@@ -734,7 +734,7 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related
 
-- [signale](https://github.com/klaussinani/signale) - Hackable console logger
+- [signale](https://github.com/klaussinani/signale) - Highly configurable logging utility
 - [taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat
 - [hyperocean](https://github.com/klaussinani/hyperocean) - Deep oceanic blue Hyper terminal theme
 
