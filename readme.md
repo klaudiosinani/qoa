@@ -488,6 +488,12 @@ The query to be displayed by the prompt.
 
 The name of the attribute under which the prompt result will be saved, inside the returned object.
 
+#### `validate`
+
+- Type: `Array`
+
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
+
 #### qoa.`input({ type, query, handle })`
 
 - Type: `Function`
@@ -514,6 +520,12 @@ The query to be displayed by the prompt.
 - Type: `String`
 
 The name of the attribute under which the prompt result will be saved, inside the returned object.
+
+#### `validate`
+
+- Type: `Array`
+
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
 
 #### qoa.`interactive({ type, query, handle, symbol, menu })`
 
@@ -669,6 +681,12 @@ The query to be displayed by the prompt.
 
 The name of the attribute under which the prompt result will be saved, inside the returned object.
 
+#### `validate`
+
+- Type: `Array`
+
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
+
 #### qoa.`config({ prefix, underlineQuery })`
 
 - Type: `Function`
@@ -722,6 +740,56 @@ Underline the query of each prompt.
 - Async: `False`
 
 Move the cursor to the top-left corner of the console and clear everything below it.
+
+## Input validation
+
+3 of the available prompts support input validation: `input`, `hidden` and `secure`.  
+A validator object consists of the following:
+
+##### `name`
+
+- Type: `String`
+
+The name of the validator.
+
+##### `validate`
+
+- Type: `Function`
+
+A function to validate the input. The first arguments given to the function is the user input. The function should return either `true` or `false` to indicate the success/fail of the validation.
+
+##### `warning`
+
+- Type: `String`
+
+The warning message to print, when the validation fails. This setting is **optional**.
+
+#### Example
+```js
+const qoa = require('qoa');
+
+const {log} = console;
+
+const ps = [
+  {
+    type: 'input',
+    query: 'Type your username:',
+    handle: 'username',
+    validate: [
+      {
+        name: 'min_length_8',
+        validate: (answer) => answer.length >= 8,
+        warning: 'The input is less than 8 characters long',
+      }
+    ]
+  },
+];
+
+qoa.prompt(ps).then(log);
+//=> { username: 'user', username_validators: {min_length_8: false} }
+```
+As you can see, the validators appear in the result prefixed with the handle you specified. In this case `username_validators`.  
+This object contains every validator result, that was tested on the current answer, where the **key** is the name of the validator and the **value** is the result of the `validate` function.
 
 ## Development
 
