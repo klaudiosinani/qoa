@@ -492,7 +492,7 @@ The name of the attribute under which the prompt result will be saved, inside th
 
 - Type: `Array`
 
-Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input-Validation).
 
 #### qoa.`input({ type, query, handle })`
 
@@ -525,7 +525,7 @@ The name of the attribute under which the prompt result will be saved, inside th
 
 - Type: `Array`
 
-Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input-Validation).
 
 #### qoa.`interactive({ type, query, handle, symbol, menu })`
 
@@ -685,7 +685,7 @@ The name of the attribute under which the prompt result will be saved, inside th
 
 - Type: `Array`
 
-Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input%20Validation).
+Contains a list of validators to run when user input is available. Specifying this is **optional**. For the sturucture of a validator please refer to [validation](#Input-Validation).
 
 #### qoa.`config({ prefix, underlineQuery })`
 
@@ -756,7 +756,7 @@ The name of the validator.
 
 - Type: `Function`
 
-A function to validate the input. The first arguments given to the function is the user input. The function should return either `true` or `false` to indicate the success/fail of the validation.
+A function to validate the input. The first argument given to the function is the user input. The function should return either `true` or `false` to indicate the success/fail of the validation.
 
 ##### `warning`
 
