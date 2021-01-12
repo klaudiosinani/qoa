@@ -6,6 +6,7 @@ const Interactive = require('./interactive');
 const Keypress = require('./keypress');
 const Quiz = require('./quiz');
 const Secure = require('./secure');
+const Multiple = require('./multiple');
 
 class Qoa {
   constructor(opts = {}) {
@@ -62,6 +63,10 @@ class Qoa {
     return new Secure(this._buildConfig(x)).request();
   }
 
+  multiple(x) {
+    return new Multiple(this._buildConfig(x)).request()
+  }
+
   clearScreen() {
     process.stdout.cursorTo(0, 0);
     process.stdout.clearScreenDown();
@@ -98,6 +103,10 @@ class Qoa {
 
         case 'secure':
           Object.assign(answers, await this.secure(x));
+          break;
+        
+        case 'multiple':
+          Object.assign(answers, await this.multiple(x));
           break;
 
         default:
