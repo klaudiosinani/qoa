@@ -64,7 +64,7 @@ class Qoa {
   }
 
   multiple(x) {
-    return new Multiple(this._buildConfig(x)).request()
+    return new Multiple(this._buildConfig(x)).request();
   }
 
   clearScreen() {
@@ -104,7 +104,7 @@ class Qoa {
         case 'secure':
           Object.assign(answers, await this.secure(x));
           break;
-        
+
         case 'multiple':
           Object.assign(answers, await this.multiple(x));
           break;

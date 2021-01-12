@@ -4,41 +4,43 @@ const Nav = require('./nav');
 
 class Multiple extends Nav {
   constructor(opts = {}) {
-    super(opts)
-    this._selectedIdx = []
+    super(opts);
+    this._selectedIdx = [];
   }
 
   get _formatItem() {
     return {
       selected: x => `(●) ${x}`,
       menu: x => `( ) ${x}`
-    }
+    };
   }
 
   get _menuItems() {
     return this._menu.map((x, i) => {
-      if (this._selectedIdx.indexOf(i) > -1) {
+      if (this._selectedIdx.includes(i) > -1) {
         return `  ${this._idx === i ? `${this._symbol}` : `${this._whitespace(this._symbol.length)}`} ${this._formatItem.selected(x)}`;
       }
-      return `  ${this._idx === i ? `${this._symbol}` : `${this._whitespace(this._symbol.length)}`} ${this._formatItem.menu(x)}`
-    })
+
+      return `  ${this._idx === i ? `${this._symbol}` : `${this._whitespace(this._symbol.length)}`} ${this._formatItem.menu(x)}`;
+    });
   }
 
   _selectItem() {
-    let idx = this._selectedIdx.indexOf(this._idx)
+    const idx = this._selectedIdx.includes(this._idx);
     if (idx > -1) {
-      this._selectedIdx.splice(idx, 1)
+      this._selectedIdx.splice(idx, 1);
     } else {
-      this._selectedIdx.push(this._idx)
+      this._selectedIdx.push(this._idx);
     }
-    this._refreshMenu()
+
+    this._refreshMenu();
   }
 
   request() {
     const answer = {};
 
     const onkeypress = (_, key) => {
-      const { name, ctrl } = key;
+      const {name, ctrl} = key;
 
       if (key && ctrl && name === 'c') {
         this._cursor.show();
@@ -55,9 +57,9 @@ class Multiple extends Nav {
         case 'j':
           this._moveDownwards();
           break;
-        
+
         case 'space':
-          this._selectItem()
+          this._selectItem();
           break;
 
         case 'return':
@@ -92,4 +94,4 @@ class Multiple extends Nav {
   }
 }
 
-module.exports = Multiple
+module.exports = Multiple;
