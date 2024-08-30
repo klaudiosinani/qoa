@@ -7,7 +7,7 @@
 </h4>
 
 <div align="center">
-  <img alt="Header" src="media/header.gif" width="75%">
+  <img alt="Header" src="media/header.gif" width="85%">
 </div>
 
 <p align="center">
@@ -15,6 +15,20 @@
     <img alt="Build Status" src="https://travis-ci.com/klaussinani/qoa.svg?branch=master">
   </a>
 </p>
+
+<div align="center">
+  <br>
+  <sup><b>Sponsored by:</b></sup>
+  <br>
+  <a href="https://betterstack.com">
+    <div>
+      <img src="https://github.com/Seldaek/monolog/assets/183678/7de58ce0-2fa2-45c0-b3e8-e60cebb3c4cf" width="200" alt="Better Stack">
+    </div>
+    <sup>
+      Spot, Resolve, and Prevent Downtime.
+    </sup>
+  </a>
+</div>
 
 ## Description
 
@@ -50,6 +64,7 @@ Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://tw
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
+- [Sponsors](#sponsors)
 - [License](#license)
 
 ## Install
@@ -742,7 +757,13 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Team
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
+
+## Sponsors
+
+A big thank you to all the people and companies supporting our Open Source work:
+
+- [Better Stack: Spot, Resolve, and Prevent Downtime.](https://betterstack.com/)
 
 ## License
 
