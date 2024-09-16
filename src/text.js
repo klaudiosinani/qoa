@@ -7,6 +7,7 @@ class Text extends Prompt {
     super(opts);
     this._historySize = 0;
     this._promptSymbol = '';
+    this._validators = opts.validate || [];
   }
 
   get _promptOpts() {
@@ -29,6 +30,20 @@ class Text extends Prompt {
 
   _removeLastChar(x) {
     return x.slice(0, x.length - 1);
+  }
+
+  _validateInput(answer) {
+    const result = {};
+    this._validators.forEach(validator => {
+      const validationResult = validator.validate(answer);
+      if (!validationResult && validator.warning) {
+        console.log(validator.warning);
+      }
+
+      result[validator.name] = validationResult;
+    });
+
+    return result;
   }
 }
 

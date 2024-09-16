@@ -53,6 +53,10 @@ class Hidden extends Text {
         result[this._handle] = secret;
         this._input.removeListener('keypress', onkeypress);
         prompt.close();
+        if (this._validators.length > 0) {
+          result[this._handle + '_validators'] = this._validateInput(secret);
+        }
+
         resolve(result);
       });
     });
