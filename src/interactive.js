@@ -1,6 +1,7 @@
 'use strict';
 const readline = require('readline');
 const Nav = require('./nav');
+const Separator = require('./separator');
 
 class Interactive extends Nav {
   constructor(opts = {}) {
@@ -40,7 +41,7 @@ class Interactive extends Nav {
       }
     };
 
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this._cursor.hide();
       this._displayQuestion();
 
@@ -55,7 +56,12 @@ class Interactive extends Nav {
         this._input.pause();
         this._input.setRawMode(false);
         this._input.removeListener('keypress', onkeypress);
-        resolve(answer);
+
+        if (answer.action instanceof Separator) {
+          reject(new Error('Separator can\'t selected'));
+        } else {
+          resolve(answer);
+        }
       });
     });
   }
