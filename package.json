@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "description": "Minimal interactive command-line prompts",
   "license": "MIT",
-  "repository": "klaussinani/qoa",
+  "repository": "klaudiosinani/qoa",
   "author": {
-    "name": "Klaus Sinani",
-    "email": "klaussinani@gmail.com",
-    "url": "https://klaussinani.github.io"
+    "name": "Klaudio Sinani",
+    "email": "klaudiosinani@protonmail.ch",
+    "url": "https://klaudiosinani.com"
   },
   "engines": {
     "node": ">=6"
