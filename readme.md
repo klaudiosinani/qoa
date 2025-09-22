@@ -10,14 +10,7 @@
   <img alt="Header" src="media/header.gif" width="85%">
 </div>
 
-<p align="center">
-  <a href="https://travis-ci.com/klaussinani/qoa">
-    <img alt="Build Status" src="https://travis-ci.com/klaussinani/qoa.svg?branch=master">
-  </a>
-</p>
-
 <div align="center">
-  <br>
   <sup><b>Sponsored by:</b></sup>
   <br>
   <a href="https://betterstack.com">
@@ -34,11 +27,9 @@
 
 Lightweight and without any external dependencies qoa enables you to receive various types of user input through a set of intuitive, interactive & verbose command-line prompts. The library utilizes a simple & minimal usage syntax and contains 7 configurable console interfaces, such as plain text, confirmation & password/secret prompts as well as single keypress, quiz & multiple-choice navigable menus.
 
-You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaussinani).
+You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaudiosinani).
 
-Visit the [contributing guidelines](https://github.com/klaussinani/qoa/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
-
-Come over to [Gitter](https://gitter.im/klaussinani/qoa) or [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
+Visit the [contributing guidelines](https://github.com/klaudiosinani/qoa/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 ## Highlights
 
@@ -114,7 +105,7 @@ const ps = [
 ];
 
 qoa.prompt(ps).then(log);
-//=> { username: 'klaussinani', password: 'token' }
+//=> { username: 'klaudiosinani', password: 'token' }
 ```
 
 <div align="center">
@@ -143,7 +134,7 @@ const login = async () => {
 }
 
 login().then(log);
-//=> { username: 'klaussinani', password: 'token' }
+//=> { username: 'klaudiosinani', password: 'token' }
 ```
 
 ## Prompts
@@ -223,11 +214,11 @@ const input = {
 
 // using the `prompt` async method
 qoa.prompt([input]).then(log);
-//=> { username: 'klaussinani' }
+//=> { username: 'klaudiosinani' }
   
 // using the `input` async method
 qoa.input(input).then(log);
-//=> { username: 'klaussinani' }
+//=> { username: 'klaudiosinani' }
 ```
 
 <div align="center">
@@ -742,7 +733,7 @@ Move the cursor to the top-left corner of the console and clear everything below
 
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/qoa/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaudiosinani/qoa/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
 - Navigate to your local fork: `cd qoa`
@@ -751,9 +742,9 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related
 
-- [signale](https://github.com/klaussinani/signale) - Highly configurable logging utility
-- [taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat
-- [hyperocean](https://github.com/klaussinani/hyperocean) - Deep oceanic blue Hyper terminal theme
+- [signale](https://github.com/klaudiosinani/signale) - Highly configurable logging utility
+- [taskbook](https://github.com/klaudiosinani/taskbook) - Tasks, boards & notes for the command-line habitat
+- [hyperocean](https://github.com/klaudiosinani/hyperocean) - Deep oceanic blue Hyper terminal theme
 
 ## Team
 
@@ -767,4 +758,4 @@ A big thank you to all the people and companies supporting our Open Source work:
 
 ## License
 
-[MIT](https://github.com/klaussinani/qoa/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/qoa/blob/master/license.md)
