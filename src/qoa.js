@@ -6,6 +6,7 @@ const Interactive = require('./interactive');
 const Keypress = require('./keypress');
 const Quiz = require('./quiz');
 const Secure = require('./secure');
+const Separator = require('./separator');
 
 class Qoa {
   constructor(opts = {}) {
@@ -60,6 +61,10 @@ class Qoa {
 
   secure(x) {
     return new Secure(this._buildConfig(x)).request();
+  }
+
+  separator(x) {
+    return new Separator(x);
   }
 
   clearScreen() {
