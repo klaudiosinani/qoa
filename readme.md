@@ -27,6 +27,8 @@
 
 Lightweight and without any external dependencies qoa enables you to receive various types of user input through a set of intuitive, interactive & verbose command-line prompts. The library utilizes a simple & minimal usage syntax and contains 7 configurable console interfaces, such as plain text, confirmation & password/secret prompts as well as single keypress, quiz & multiple-choice navigable menus.
 
+Read this document in: [Albanian - Shqip](https://github.com/klaudiosinani/qoa/blob/master/docs/readme.AL.md).
+
 You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaudiosinani).
 
 Visit the [contributing guidelines](https://github.com/klaudiosinani/qoa/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
